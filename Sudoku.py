@@ -156,34 +156,6 @@ class Sudoku(object):
                     all_filled = False
         return all_filled and self.valid
 
-#    def find_disjunction(self):
-#        """Return a disjunction tuple (i, j, values).
-#
-#        * (i,j) is an empty cell
-#        * values is the list of possible values of that cell.
-#        * We do a disjunction on cells with the least possible
-#        number of hypothetical values, hopefully 2.
-#        """
-#        min_l = self.SIZE  # The list cannot be bigger than the size.
-#        values = []
-#        min_i = -1
-#        min_j = -1
-#        for i in range(self.size):
-#            for j in range(self.size):
-#                p_list = self.possibility_grid[i][j]
-#                l = len(p_list)
-#                if l == 1:
-#                    pass
-#                elif l == 2:  # No need to search for a shorter list.
-#                    return i, j, values
-#                else:  # p_list has length >= 3.
-#                       # We keep track of the shortest disjunction set so far.
-#                    if len(p_list) < min_l:
-#                        min_i = i
-#                        min_j = j
-#                        values = p_list
-#        return min_i, min_j, values
-
     def find_disjunction(self):
         """Return a disjunction tuple (i, j, values).
 
