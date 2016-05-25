@@ -221,6 +221,10 @@ class Sudoku(object):
                     string += '. '
                 else:
                     string += str(self.grid[i][j]) + ' '
+                if j % self.SQUARE == self.SQUARE - 1:
+                    string += ' '
+            if i % self.SQUARE == self.SQUARE - 1:
+                string += '\n'
             string += '\n'
         return string
 
